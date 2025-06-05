@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhã Beneficente - Ações Realizadas</title>
+
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="icon" href="{% static 'Imagens/logo_manha.ico' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="menu">
+    <div class="menu-container">
+      <a href="{% url 'index' %}">
+        <img id="logotipo" src="{% static 'Imagens/Logo_Manha_azul.png' %}" alt="Logotipo da Manhã Beneficente">
+      </a>
+      <nav class="op">
+        <a href="{% url 'index' %}">Início</a>
+        <a href="{% url 'quemsomos' %}">Quem Somos</a>
+        <a href="{% url 'contatos' %}">Contatos</a>
+        <a href="{% url 'acoes' %}" class="ativo">Ações Realizadas</a>
+        <a href="{% url 'transparencia' %}">Transparência</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO DAS AÇÕES -->
+  <main class="acoes-container">
+    <section class="cabecalho-centralizado">
+      <h1>Ações Realizadas</h1>
+      <p>Confira alguns dos momentos marcantes das nossas iniciativas sociais.</p>
+    </section>
+
+    <section class="galeria-acoes">
+      <div class="card-acao">
+        <img src="{% static 'Imagens/cestas_manha.png' %}" alt="Foto de ação beneficente">
+        <h2>Entrega de Cestas</h2>
+        <p>Distribuímos mais de 50 cestas básicas para famílias em situação de vulnerabilidade.</p>
+      </div>
+
+      <div class="card-acao">
+        <img src="{% static 'Imagens/Futevolei_Beneficente.png' %}" alt="Foto de voluntários">
+        <h2>FutVôlei Solidário</h2>
+        <p>Evento esportivo com arrecadação de alimentos e brinquedos, unindo esporte e solidariedade.</p>
+      </div>
+
+      <div class="card-acao">
+        <img src="{% static 'Imagens/entrega_aguas.png' %}" alt="Foto da entrega em Petrópolis">
+        <h2>Entrega em Petrópolis</h2>
+        <p>Entrega de 200 litros de água durante a tragédia do deslizamento.</p>
+      </div>
+
+      <div class="card-acao">
+        <img src="{% static 'Imagens/Dia_Das_Crianças.png' %}" alt="Foto do Dia das Crianças">
+        <h2>Entrega Dia das Crianças</h2>
+        <p>Distribuição de cestas básicas com brincadeiras e carinho para as crianças.</p>
+      </div>
+
+      <div class="card-acao">
+        <img src="{% static 'Imagens/Incendio_Dellabitare.png' %}" alt="Foto da ação após incêndio">
+        <h2>Ajuda ao Dellabitare</h2>
+        <p>Entregamos alimentos aos funcionários atingidos pelo incêndio na loja parceira.</p>
+      </div>
+
+      <div class="card-acao">
+        <img src="{% static 'Imagens/FutDelas_Manha.png' %}" alt="Evento FutDelas">
+        <h2>Participação no FutDelas</h2>
+        <p>Arrecadação de 370kg de alimentos em parceria com o evento FutDelas.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- BOTÃO WHATSAPP -->
+  <a href="https://wa.me/5521976817615?text=Olá Gostei muito do seu projeto, gostaria de saber mais" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p class="footer-text">© 2025 Manhã Beneficente. Todos os direitos reservados.</p>
+      <a href="/admin/" style="font-size: 12px; color: inherit; text-decoration: none; margin-left: 10px;">Administrador</a>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/manha_beneficente/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5521976817615?text=Olá Gostei muito do seu projeto, gostaria de saber mais" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:manhabeneficente@hotmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

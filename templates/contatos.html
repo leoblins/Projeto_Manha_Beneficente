@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhã Beneficente - Contato</title>
+
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="icon" href="{% static 'Imagens/logo_manha.ico' %}" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="menu">
+    <div class="menu-container">
+      <a href="{% url 'index' %}">
+        <img id="logotipo" src="{% static 'Imagens/Logo_Manha_azul.png' %}" alt="Logotipo da Manhã Beneficente">
+      </a>
+      <nav class="op">
+        <a href="{% url 'index' %}">Início</a>
+        <a href="{% url 'quemsomos' %}">Quem Somos</a>
+        <a href="{% url 'contatos' %}" class="ativo">Contatos</a>
+        <a href="{% url 'acoes' %}">Ações Realizadas</a>
+        <a href="{% url 'transparencia' %}">Transparência</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SEÇÃO CONTATO HORIZONTAL -->
+  <section class="contato-hor">
+    <img src="{% static 'Imagens/Meninos_Manha.png' %}" alt="Crianças com doações">
+    
+    <div class="texto-contato">
+      <h2>Fale Conosco</h2>
+      <p>Sua ajuda é essencial para continuarmos nossas ações. Você pode participar como voluntário, doar alimentos ou roupas, ou simplesmente divulgar nossa causa.</p>
+      
+      <p><i class="fab fa-whatsapp"></i> 
+        <a href="https://wa.me/5521976817615?text=Olá, gostaria de saber mais sobre o projeto." target="_blank">
+          (21) 97681-7615
+        </a>
+      </p>
+
+      <p><i class="fab fa-instagram"></i> 
+        <a href="https://www.instagram.com/manha_beneficente/" target="_blank">
+          @manha_beneficente
+        </a>
+      </p>
+
+      <p><i class="fas fa-envelope"></i> 
+        <a href="mailto:manhabeneficente@hotmail.com">
+          manhabeneficente@hotmail.com
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- BOTÃO WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/5521976817615?text=Olá Gostei muito do seu projeto, gostaria de saber mais" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p class="footer-text">© 2025 Manhã Beneficente. Todos os direitos reservados.</p>
+      <a href="/admin/" style="font-size: 12px; color: inherit; text-decoration: none;">Administrador</a>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/manha_beneficente/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5521976817615" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:manhabeneficente@hotmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

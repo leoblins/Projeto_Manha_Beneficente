@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhã Beneficente</title>
+
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="icon" href="{% static 'Imagens/logo_manha.ico' %}" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="{% static 'script.js' %}" defer></script>
+</head>
+<body>
+
+  <!-- header -->
+  <header id="menu">
+    <div class="menu-container">
+      <a href="{% url 'index' %}">
+        <img id="logotipo" src="{% static 'Imagens/Logo_Manha_azul.png' %}" alt="Logotipo da Manhã Beneficente">
+      </a>
+      <nav class="op">
+        <a href="{% url 'index' %}" class="ativo">Início</a>
+<a href="{% url 'quemsomos' %}">Quem Somos</a>
+<a href="{% url 'contatos' %}">Contatos</a>
+<a href="{% url 'acoes' %}">Ações Realizadas</a>
+<a href="{% url 'transparencia' %}">Transparência</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main id="box">
+    <p class="principal">
+      Nossa missão é ajudar quem mais precisa.<br>
+      Para isso, contamos com a ajuda de cada um de vocês.<br>
+      Conheça um pouco da nossa história e venha fazer parte desse time.
+    </p>
+    <button id="botao" onclick="window.location.href='{% url 'contatos' %}'">Faça parte desse time</button>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5521976817615?text=Olá Gostei muito do seu projeto, gostaria de saber mais" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p class="footer-text">© 2025 Manhã Beneficente. Todos os direitos reservados.</p>
+      <a href="/admin/" style="font-size: 12px; color: inherit; text-decoration: none; margin-left: 10px;">Administrador</a>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/manha_beneficente/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5521976817615?text=Olá Gostei muito do seu projeto, gostaria de saber mais" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:manhabeneficente@hotmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
