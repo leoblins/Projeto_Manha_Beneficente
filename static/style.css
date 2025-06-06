@@ -25,7 +25,7 @@ main {
 
 /* ========== HEADER / MENU ========== */
 #menu {
-  background-color: #facc15;
+  background-color: #fa1515;  /*facc15 */
   padding: 10px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
