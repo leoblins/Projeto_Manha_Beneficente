@@ -64,3 +64,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Força atualização de arquivos estáticos sempre que mudar o CSS/JS
+WHITENOISE_AUTOREFRESH = True  # Funciona apenas em DEBUG=True, mas garante build limpo
+WHITENOISE_USE_FINDERS = True
