@@ -6,7 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("SECRET_KEY", "unsafe-key")
 DEBUG = False
-ALLOWED_HOSTS = ['manha-beneficente.onrender.com']  # substitua pelo seu domínio
+ALLOWED_HOSTS = ['projeto-manha-beneficente.onrender.com']
+  # substitua pelo seu domínio
 
 INSTALLED_APPS = [
     'django.contrib.admin',
