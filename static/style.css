@@ -366,3 +366,26 @@ footer {
   color: #2563eb;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  #menu {
+    text-align: center;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav.op {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #menu a {
+    margin: 5px 6px;
+  }
+}
