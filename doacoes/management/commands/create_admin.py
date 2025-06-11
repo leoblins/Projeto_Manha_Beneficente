@@ -2,23 +2,27 @@ from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 
 class Command(BaseCommand):
-    help = 'Remove qualquer superusuário e cria um novo com credenciais fixas'
+    help = 'Cria superusuários fixos se ainda não existirem'
 
     def handle(self, *args, **options):
         User = get_user_model()
-        username = 'leoblins'
-        email = 'leoblins@gmail.com'
-        password = 'Sardinha221405@'
 
-        # Apaga todos os superusuários existentes
-        superusers = User.objects.filter(is_superuser=True)
-        for user in superusers:
-            self.stdout.write(self.style.WARNING(f'Removendo superusuário: {user.username}'))
-            user.delete()
+        superusers = [
+            {"username": "leoblins", "email": "leoblins@gmail.com", "password": "Sardinha221405@"},
+            {"username": "Web3admin", "email": "web3admin@email.com", "password": "Senha123"},
+        ]
 
-        # Cria novo superusuário
-        if not User.objects.filter(username=username).exists():
-            User.objects.create_superuser(username=username, email=email, password=password)
-            self.stdout.write(self.style.SUCCESS(f'Superusuário {username} criado com sucesso'))
-        else:
-            self.stdout.write(self.style.WARNING(f'Usuário {username} já existe, mas não é superusuário'))
+        for user_data in superusers:
+            usuario = User.objects.filter(username=user_data["username"]).first()
+
+            if usuario and usuario.is_superuser:
+                self.stdout.write(f"Superusuário '{user_data['username']}' já existe.")
+            elif usuario:
+                self.stdout.write(self.style.WARNING(f"Usuário '{user_data['username']}' existe, mas não é superusuário."))
+            else:
+                User.objects.create_superuser(
+                    username=user_data["username"],
+                    email=user_data["email"],
+                    password=user_data["password"]
+                )
+                self.stdout.write(self.style.SUCCESS(f"Superusuário '{user_data['username']}' criado com sucesso."))
